@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    background: #80ced6;
+    height: 1700px;
+  }
+  .header{
+      min-height: 100vh;
+      width: 100%;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+  }
+    nav{
+      background: pink;
+      height: 80px
+    }
+    .navbar.scrolled {
+      background: rgb(34, 31, 31);
+      transition: background 500ms
+    }
+    nav:after{
+      content: '';
+      clear: both;
+      display: table;
+    }
+    nav .logo{
+      float: left;
+      color: black;
+      font-size: 27px;
+      font-weight: 600;
+      line-height: 50px;
+      padding-left: 60px;
+      padding-top: 10px;
+      
+    }
+    nav ul{
+      float: right;
+      margin-right: 40px;
+      list-style: none;
+      position: relative;
+      margin-top: 10px;
+    }
+    nav ul li{
+    
+      display: inline-block;
+      background: black;
+      margin: 0 5px;
+    }
+    nav ul li a{
+      color: white;
+      line-height: 50px;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 8px 15px;
+    }
+    nav ul li a:hover{
+      color: #780000;
+      border-radius: 5px;
+      box-shadow:  0 0 5px #780000,
+                   0 0 10px #780000;
+    }
+    nav ul ul li a:hover{
+      box-shadow: none;
+    }
+    nav ul ul{
+      position: absolute;
+      top: 90px;
+      border-top: 3px solid #780000;
+      opacity: 0;
+      visibility: hidden;
+      transition: top .3s;
+    }
+    nav ul ul ul{
+      border-top: none;
+    }
+    nav ul li:hover > ul{
+      top: 50px;
+      opacity: 1;
+      visibility: visible;
+    }
+    nav ul ul li{
+      position: relative;
+      margin: 0px;
+      width: 150px;
+      float: none;
+      display: list-item;
+      border-bottom: 1px solid rgba(0,0,0,0.3);
+    }
+    nav ul ul li a{
+      line-height: 50px;
+    }
+    nav ul ul ul li{
+      position: relative;
+      top: -60px;
+      left: 150px;
+    }
+    .show,.icon,input{
+      display: none;
+    }
+    .fa-plus{
+      font-size: 15px;
+      margin-left: 40px;
+    }
+    @media all and (max-width: 968px) {
+      nav ul{
+        margin-right: 0px;
+        float: left;
+      }
+      nav .logo{
+        padding-left: 30px;
+        width: 100%;
+      }
+      .show + a, ul{
+        display: none;
+      }
+      nav ul li,nav ul ul li{
+        display: block;
+        width: 100%;
+        height: 100px;
+        margin-left: 250px;
+        margin-top: -10px;
+      }
+      nav ul li a:hover{
+        box-shadow: none;
+      }
+      .show{
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+      }
+      .show:hover{
+        color: cyan;
+      }
+      .icon{
+        display: block;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        line-height: 70px;
+        cursor: pointer;
+        font-size: 25px;
+      }
+      nav ul ul{
+        top: 70px;
+        border-top: 0px;
+        float: none;
+        position: static;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+      }
+      nav ul ul a{
+        padding-left: 40px;
+      }
+      nav ul ul ul a{
+        padding-left: 80px;
+      }
+      nav ul ul ul li{
+        position: static;
+      }
+      [id^=btn]:checked + ul{
+        display: block;
+      }
+      nav ul ul li{
+        border-bottom: 0px;
+      }
+      span.cancel:before{
+        content: '\f00d';
+      }
+      ul li .btn{
+        margin-top: 20px;
+        margin-left: 1px;
+      }
+    }
+  .col{
+      margin-top: 100px;
+  }
+  img{
+      height: 550px;
+      position: relative;
+  }
+  @media(max-width: 700px){
+      img{
+          height: 400px;
+          flex-direction: column;
+      }
+  }
+  .text-box{
+      font-size: 65px;
+      padding-top: 200px;
+      text-align: center;
+      color: #f2f2f2;
+  }
+  .text-box h1{
+    font-size: 65px;
+  }
+  .hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:#fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+  }
+  .header .text-box p{
+      margin: 10px 0 40px;
+      font-size: 20px;
+      color: #fff;
+  }
+  .logo1{
+    height: 65px;
+  }
+  .first{
+    margin-top: 50px;
+  }
+  .first img{
+    text-align: center;
+    padding-left: 160px;
+    height: 500px;
+    width: 1000px;
+  }
+  .first h1{
+    color: #780000;
+    font-size: 60px;
+  }
+  .first h2{
+    color: #780000;
+    font-size: 40px;
+  }
+  @media(max-width: 700px){
+    .first img{
+      margin-left: -185px;
+        width: 700px;
+    }
+    .first h1{
+      color: #780000;
+      font-size: 40px;
+    }
+    .first h2{
+      color: #780000;
+      font-size: 28px;
+    }
+  }
+  .row{
+    margin-top: 50px;
+  }
+  .row h1{
+    padding-top: 10px;
+    color: #780000;
+    font-size: 60px;
+    margin-left: 90px;
+  }
+  .row p{
+    padding-top: 10px;
+    color: #780000;
+    font-size: 30px;
+    margin-left: 90px;
+    text-align: justify;
+  }
+  
+  .row img{
+      height: 450px;
+      margin-left: 100px;
+  }
+  .row button{
+    margin-left: 450px;
+    position: absolute;
+  }
+  
+  @media(max-width: 700px){
+    .row img{
+      flex-direction: column;
+      margin-left: -200px;
+        width: 600px;
+        height: 300px;
+    }
+    .row h1{
+      color: #780000;
+      font-size: 20px;
+      text-align: justify;
+      flex-direction: column;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    .row p{
+      color: #780000;
+      font-size: 15px;
+      text-align: justify;
+      flex-direction: column;
+      margin-left: 20px;
+      margin-top: -20px;
+    }
+    .row button{
+      font-size: large;
+      margin-left: 70px;
+    }
+  }
+  /***FOOTTER*****/
+  .footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 200px;
+    background-color: #d8e2dc;
+  }
+  .footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+  }
+  .icons .fa{
+    color: #e85d04;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+  }
+  .fa-bicycle{
+    color: #e85d04;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+
+/*IMAGE SLIDER*/
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .gradient img{
+    display:block;
+  }
+  .text{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+  }
+  .text h1{
+    font-size: 58px;
+  }
+  .text p{
+    font-size: 16px;
+    color: #fff;
+  }
+  .pt-lg-5{
+    margin-top: 80px;
+  }
+  .pt-lg-5 h3{
+    color: #eccd01;
+  }
+  .pt-lg-4 h3{
+    color: #eccd01;
+  }
+  .card-title {
+    font-size: 25px;
+    color: #fca311;
+  }
+  .card:hover{
+    box-shadow: 0 0 20px 0px rgb(0,0,0,0.2);
+    background-color:#fff7b0;
+  }
+  .col-md-8{
+    background-color:#fff7b0;
+  }
+  .price{
+    color: #d00000;
+  }
+  @media(max-width: 700px){
+    .card{
+      margin-left: -5px;
+    }
+    .col-lg-5{
+      margin-left: -100px;
+    }
+  }
+  .center{
+    margin-left: 200px;
+  }
+  /*ARROW UP */
+  .back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    background-color: rgb(250, 227, 98) !important;
+  }
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
